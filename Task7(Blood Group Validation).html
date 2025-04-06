@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Picture Validation</title>
+    <script src="validation.js"></script>
+</head>
+<body>
+    <form id="profileForm" onsubmit="return validateForm('profileForm')">
+        <h2>Profile Picture</h2>
+        User Id: <input type="text" id="userId" name="userId"><br>
+        Picture: <input type="file" id="picture" name="picture">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
