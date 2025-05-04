@@ -1,1 +1,11 @@
-
+function filterCars(type) {
+    const cars = document.querySelectorAll('.car-card');
+    cars.forEach(car => {
+      if (type === 'all' || car.dataset.type === type) {
+        car.style.display = 'block';
+      } else {
+        car.style.display = 'none';
+      }
+    });
+  }
+  
