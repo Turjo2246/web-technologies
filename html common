@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Rental System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Car Rental System</h1>
+    <nav>
+      <a href="#cars">Cars</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Landing Section -->
+  <section class="landing">
+    <h2>Welcome to Our Car Rental Service</h2>
+    <p>Browse our collection of reliable vehicles available for rent at affordable rates.</p>
+  </section>
+
+  <!-- Car Gallery -->
+  <section id="cars">
+    <h2>Available Cars</h2>
+    <div class="filter-buttons">
+      <button onclick="filterCars('all')">All</button>
+      <button onclick="filterCars('SUV')">SUV</button>
+      <button onclick="filterCars('Sedan')">Sedan</button>
+      <button onclick="filterCars('Truck')">Truck</button>
+    </div>
+    <div class="car-container" id="carContainer">
+      <div class="car-card" data-type="SUV">
+        <img src="https://via.placeholder.com/300x180?text=SUV+1" alt="SUV">
+        <h3>Ford Explorer</h3>
+        <p>Type: SUV</p>
+      </div>
+      <div class="car-card" data-type="Sedan">
+        <img src="https://via.placeholder.com/300x180?text=Sedan+1" alt="Sedan">
+        <h3>Toyota Camry</h3>
+        <p>Type: Sedan</p>
+      </div>
+      <div class="car-card" data-type="Truck">
+        <img src="https://via.placeholder.com/300x180?text=Truck+1" alt="Truck">
+        <h3>Ford F-150</h3>
+        <p>Type: Truck</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Car Rental System. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
