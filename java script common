@@ -1,0 +1,27 @@
+function filterCars(type) {
+    const cars = document.querySelectorAll('.car-card');
+    cars.forEach(car => {
+      if (type === 'all' || car.dataset.type === type) {
+        car.style.display = 'block';
+      } else {
+        car.style.display = 'none';
+      }
+    });
+  }
+  
+  function validateForm() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const msgBox = document.getElementById("formMessage");
+  
+    if (name && email && message) {
+      msgBox.textContent = "Message sent successfully!";
+      msgBox.style.color = "green";
+    } else {
+      msgBox.textContent = "Please fill all fields.";
+      msgBox.style.color = "red";
+    }
+    return false; // prevent real submission
+  }
+  
